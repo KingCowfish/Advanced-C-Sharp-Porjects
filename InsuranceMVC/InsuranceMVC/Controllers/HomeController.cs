@@ -22,12 +22,7 @@ namespace InsuranceMVC.Controllers
         {
             return View();
         }
-
-        public ActionResult Success()
-        {
-            return View();
-        }
-
+       
         [HttpPost]
         public ActionResult Quote(string firstName, string lastName, string emailAddress, DateTime dateOfBirth, string carMake, string carModel, int carYear,
             int ticket, int dUI, bool coverage)
@@ -128,6 +123,33 @@ namespace InsuranceMVC.Controllers
             }
         }
 
+        public ActionResult Success()
+        {
+            string queryString = @"SELECT Id, FirstName, LastName, EmailAddress, Rate from Quotes";
+            List<Applicant> applicants = new List<Applicant>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(queryString, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    var applicant = new Applicant();
+                    applicant.Id = Convert.ToInt32(reader["Id"]);
+                    applicant.FirstName = reader["FirstName"].ToString();
+                    applicant.LastName = reader["LastName"].ToString();
+                    applicant.EmailAddress = reader["EmailAddress"].ToString();
+                    applicant.Rate = Convert.ToInt32(reader["Rate"]);
+                    applicants.Add(applicant);
+                }
+            }
+
+            return View(applicants);
+        }
+
+
         public ActionResult Admin()
         {
             string queryString = @"SELECT Id, FirstName, LastName, EmailAddress, Rate from Quotes";
@@ -153,7 +175,7 @@ namespace InsuranceMVC.Controllers
             }
 
 
-            return View();
+            return View(applicants);
         }
     }
 }
