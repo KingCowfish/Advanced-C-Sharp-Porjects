@@ -70,7 +70,6 @@ C:\Repos\Advanced-C-Sharp-Projects\InsuranceMVC\InsuranceMVC\bin\Newtonsoft.Json
 C:\Repos\Advanced-C-Sharp-Projects\InsuranceMVC\InsuranceMVC\bin\Antlr3.Runtime.pdb
 C:\Repos\Advanced-C-Sharp-Projects\InsuranceMVC\InsuranceMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Repos\Advanced-C-Sharp-Projects\InsuranceMVC\InsuranceMVC\obj\Debug\InsuranceMVC.csprojAssemblyReference.cache
-C:\Repos\Advanced-C-Sharp-Projects\InsuranceMVC\InsuranceMVC\obj\Debug\InsuranceMVC.csproj.CoreCompileInputs.cache
 C:\Repos\Advanced-C-Sharp-Projects\InsuranceMVC\InsuranceMVC\obj\Debug\InsuranceMVC.csproj.CopyComplete
 C:\Repos\Advanced-C-Sharp-Projects\InsuranceMVC\InsuranceMVC\obj\Debug\InsuranceMVC.dll
 C:\Repos\Advanced-C-Sharp-Projects\InsuranceMVC\InsuranceMVC\obj\Debug\InsuranceMVC.pdb
