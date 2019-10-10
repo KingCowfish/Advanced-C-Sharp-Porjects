@@ -1,8 +1,12 @@
 ﻿@using InsuranceMVC.Models
-@model Applicant
+@model List<Applicant>
 
-<h3>Based off of your information monthly dues for SCAM Insurance would be...</h3>
-<br />
-<br />
-    @Applicant rate = new Applicant
-<h1></h1>
+@foreach (var applicant in Model)
+{
+    <h3>Thank you @applicant.FirstName</h3>
+    <br />
+    <br />
+    <h3>Based off of your information, your monthly SCAM Insurance would be:</h3>
+    <h1>$@applicant.Rate</h1>
+
+}
