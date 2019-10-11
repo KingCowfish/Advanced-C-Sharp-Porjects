@@ -22,10 +22,10 @@ namespace InsuranceMVC.Controllers
         {
             return View();
         }
-       
+
         [HttpPost]
-        public ActionResult Quote(string firstName, string lastName, string emailAddress, DateTime dateOfBirth, string carMake, string carModel, int carYear,
-            int ticket, int dUI, bool coverage)
+        public ActionResult Quote(string firstName, string lastName, string emailAddress, DateTime dateOfBirth, string carMake, string carModel, int carYear = 2019,
+            int ticket = 0, int dUI = 0, bool coverage = false)
         {
             if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(emailAddress) || string.IsNullOrEmpty(carMake)
                 || string.IsNullOrEmpty(carModel))
@@ -42,13 +42,13 @@ namespace InsuranceMVC.Controllers
 
                 if ((age) < 25 && (age) > 18)
                 {
-                     r = r + 25;
+                    r = r + 25;
                 }
-                else if((age) < 18)
+                else if ((age) < 18)
                 {
                     r = r + 100;
                 }
-                else if((age) > 100)
+                else if ((age) > 100)
                 {
                     r = r + 25;
                 }
@@ -57,7 +57,7 @@ namespace InsuranceMVC.Controllers
                 {
                     r = r + 25;
                 }
-                else if(carYear > 2015)
+                else if (carYear > 2015)
                 {
                     r = r + 25;
                 }
@@ -66,7 +66,7 @@ namespace InsuranceMVC.Controllers
                 {
                     r = r + 25;
                 }
-                else if(carMake == "Porsche" && carModel == "911 Carrera")
+                else if (carMake == "Porsche" && carModel == "911 Carrera")
                 {
                     r = r + 50;
                 }
@@ -119,6 +119,9 @@ namespace InsuranceMVC.Controllers
                     command.ExecuteNonQuery();
                     connection.Close();
                 }
+
+                ViewBag.firstName = firstName;
+                ViewBag.Rate = rate;
                 return View("Success");
             }
         }
@@ -160,7 +163,7 @@ namespace InsuranceMVC.Controllers
                 SqlCommand command = new SqlCommand(queryString, connection);
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
-                
+
                 while (reader.Read())
                 {
                     var applicant = new Applicant();
