@@ -77,3 +77,7 @@ C:\Repos\Advanced-C-Sharp-Projects\ContosoUniversity\ContosoUniversity\bin\Entit
 C:\Repos\Advanced-C-Sharp-Projects\ContosoUniversity\ContosoUniversity\bin\EntityFramework.SqlServer.dll
 C:\Repos\Advanced-C-Sharp-Projects\ContosoUniversity\ContosoUniversity\bin\EntityFramework.xml
 C:\Repos\Advanced-C-Sharp-Projects\ContosoUniversity\ContosoUniversity\bin\EntityFramework.SqlServer.xml
+C:\Repos\Advanced-C-Sharp-Projects\ContosoUniversity\ContosoUniversity\bin\PagedList.dll
+C:\Repos\Advanced-C-Sharp-Projects\ContosoUniversity\ContosoUniversity\bin\PagedList.Mvc.dll
+C:\Repos\Advanced-C-Sharp-Projects\ContosoUniversity\ContosoUniversity\bin\PagedList.xml
+C:\Repos\Advanced-C-Sharp-Projects\ContosoUniversity\ContosoUniversity\bin\PagedList.Mvc.xml
